@@ -5,6 +5,7 @@ import (
 	"log"
 	"fmt"
 	"os"
+	"path/filepath"
 )
 
 var (
@@ -22,10 +23,11 @@ func createFile(name string) {
 
 func main() {
 	projName := flag.String("name", "dummyProj", "your project name")
+	fileType := flag.String("type", "py", "file type")
 
 	flag.Parse()
-	fileName := fmt.Sprintf("%s.py", *projName)
-	dirName := fmt.Sprintf("./%s", *projName)
+	fileName := fmt.Sprintf("%s.%s", *projName, *fileType)
+	dirName := filepath.Join(".", *projName)
 
 	_, err := os.Stat(dirName)
 	if !os.IsNotExist(err) {
