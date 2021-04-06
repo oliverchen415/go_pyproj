@@ -12,18 +12,18 @@ Creates a simple folder with a starter file, .gitignore and README.md
 Restart any terminals you have open. Now you can simply call `go_pyproj` from any location on your computer.
 
 ### MacOS/Linux
-I don't own a Mac or a Linux machine (I can't run the Linux binaries under WSL), so you need to build the binaries yourself.
+I don't own a Mac or a Linux machine (I have some issues testing out the created binaries), so you'll need to build the binaries yourself.
 
-You'll only need `Go 1.13+`. Run `go build` to produce the correct binary for your OS. Just like the Windows instructions above, add the binary to your $PATH variable.
+You'll only need `Go 1.13+`. Run `go build` on the source code to produce the correct binary for your OS. Just like the Windows instructions above, add the binary to your $PATH variable. You can look up the specifics, but in either case you'll need to edit a config file, e.g. `~/bashrc`.
 
 ### go get
-Alternatively, you can run
+Alternatively, if you already have Go, you can run
 ```
 go get github.com/oliverchen415/go_pyproj
 ```
 This will download the files to your $GOPATH. On my system, I can find the files at
 ```
-pkg\mod\github.com\oliverchen415\...
+$GOPATH\pkg\mod\github.com\oliverchen415\...
 ```
 
 ## Usage
@@ -32,7 +32,7 @@ From a terminal, `cd` into an approprate location. Then enter
 go_pyproj -name=<project_name> -type=<file_type>
 ```
 
-You can leave one or both blank. By default, `<project_name>` is "dummyProj" and `<file_type>` is "py". This can also be seen if you enter
+You can leave either one blank or both blank. By default, `<project_name>` is "dummyProj" and `<file_type>` is "py". This can also be seen if you enter
 ```
 go_pyproj -h
 ```
