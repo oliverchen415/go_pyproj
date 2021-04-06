@@ -1,5 +1,5 @@
 # Go_PyProj
-Creates a simple folder with a starter file, .gitignore and README.md
+Creates a simple folder with a starter file (mainly .py or .go files), .gitignore and README.md
 
 ## Installation
 
